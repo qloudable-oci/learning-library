@@ -83,7 +83,6 @@ In this lab we will use Custom image feature of OCI. Using this feature an exist
 - Click **Next**.
 
 <img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v3.PNG?st=2020-05-07T10%3A57%3A26Z&se=2023-05-08T10%3A57%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=5U%2BaJudLgu7GpmhEd6%2B6BabwjiZO84yNYbZ1%2Fn6JywY%3D" alt="image-alt-text">
-
 <img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v7.PNG?st=2020-05-07T10%3A58%3A17Z&se=2023-05-08T10%3A58%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=Tih%2FQGvqpJPJ7XIbuXlxch9YZh4qvHyzveAZkcvK9%2FU%3D" alt="image-alt-text">
 
 5. Verify all the information and  Click **Create**.
