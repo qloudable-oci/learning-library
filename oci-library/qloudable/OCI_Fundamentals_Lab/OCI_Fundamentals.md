@@ -29,7 +29,6 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 
 **We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
 
-
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
 - Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
@@ -61,49 +60,58 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 
 ## Sign in to OCI Console and create VCN
 
-
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
 
-
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/Grafana/img/Grafana_015.PNG?st=2020-04-21T04%3A33%3A02Z&se=2023-04-22T04%3A33%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=o7WiLw2B9WOKD7bAaX3pa%2F7nKUe6UUlgDws7AYYi%2F9I%3D" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network**. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Networking QuickStart**
+2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Start VCN Wizard**
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/2.png?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v6.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v1.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
+3. Click **VCN with Internet Connectivity** and click **Start VCN Wizard**.
 
-4. Choose **VCN with Internet Connectivity** and click **Start Workflow**
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v2.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
-5. Fill out the dialog box:
-
+4. Fill out the dialog box:
 
 - **VCN NAME**: Provide a name
 - **COMPARTMENT**: Ensure your compartment is selected
 - **VCN CIDR BLOCK**: Provide a CIDR block (10.0.0.0/16)
 - **PUBLIC SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
 - **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.2.0/24)
-- Click **Next**
+- Click **Next**.
 
-6. Verify all the information and  Click **Create**
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v3.PNG?st=2020-05-07T10%3A57%3A26Z&se=2023-05-08T10%3A57%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=5U%2BaJudLgu7GpmhEd6%2B6BabwjiZO84yNYbZ1%2Fn6JywY%3D" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v7.PNG?st=2020-05-07T10%3A58%3A17Z&se=2023-05-08T10%3A58%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=Tih%2FQGvqpJPJ7XIbuXlxch9YZh4qvHyzveAZkcvK9%2FU%3D" alt="image-alt-text">
 
-7. This will create a VCN with followig components.
+5. Verify all the information and  Click **Create**.
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v4.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+6. This will create a VCN with followig components.
 
 **VCN**, **Public subnet**, **Private subnet**, **Internet gateway (IG)**, **NAT gateway (NAT)**, **Service gateway (SG)**
 
-8. Click **View Virtual Cloud Network** to display your VCN details.
-              
+7. Click **View Virtual Cloud Network** to display your VCN details.
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v5.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
               
 ## Create Public Private SSH Key Pair, two compute instances and install web server
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG?st=2020-04-21T04%3A36%3A54Z&se=2023-04-22T04%3A36%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=lBZSBQh7ohc%2F56ZI48vHx0bN0D9Uz1f6Y21TwonJfRE%3D" alt="image-alt-text">
 
 2. Enter command 
 ```
@@ -111,11 +119,11 @@ ssh-keygen
 ```
 **HINT:** You can swap between OCI window, git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG?st=2020-04-21T04%3A37%3A25Z&se=2023-04-22T04%3A37%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=spwANKNNuOLgrIHZPJVg9SuwZzVU1TpGwPQwzktQRIE%3D" alt="image-alt-text">
 
 3. Press Enter When asked for 'Enter File in which to save the key', 'Created Directory, 'Enter passphrase', and 'Enter Passphrase again.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG?st=2020-04-21T04%3A37%3A53Z&se=2023-04-22T04%3A37%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=lvfRmFoAOWGqHw54BjXNQ7gKxZxxUGmStUYGZ7hT4Qs%3D" alt="image-alt-text">
 
 4. You should now have the Public and Private keys:
 
@@ -144,11 +152,11 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
  , highlight the key and copy 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG?st=2020-04-21T04%3A38%3A18Z&se=2023-04-22T04%3A38%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=lrVs0vtmJPZ%2F7G8vWqNb5wxPq3EQBfSVI%2FkvIP6TeSw%3D" alt="image-alt-text">
 
 6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG?st=2020-04-21T04%3A38%3A47Z&se=2023-04-22T04%3A38%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=v2ez%2FdLByxV9WLD0Jf985Qavqm5so6gkRuIHe2pin8I%3D" alt="image-alt-text">
 
 7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
@@ -168,7 +176,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Use network security groups to control traffic** : Leave un-checked
 - **Assign a public IP address**: Check this option
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG?st=2020-04-21T04%3A39%3A14Z&se=2023-04-22T04%3A39%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=bubrAoB6P3dNOtjVC93IBXXLvPFiV9wLvbdJRDGrtpA%3D" alt="image-alt-text">
 
 - **Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
@@ -190,13 +198,13 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```bash
 ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
-**NOTE:** User name is ‘opc’.
+**NOTE:** User name is â€˜opcâ€™.
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command
 
 14. Enter 'Yes' when prompted for security message
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG?st=2020-04-21T04%3A39%3A42Z&se=2023-04-22T04%3A39%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=MQgHXRRCdiabECKRg5USDVMa2%2Fr6DQQYjImE53qTemA%3D" alt="image-alt-text">
  
 15. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
@@ -204,7 +212,7 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 
 **HINT:** You can swap between the OCI window, git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_001.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Fundamentals_Lab/img/OCI_Fundamentals_001.PNG?st=2020-04-21T04%3A40%3A50Z&se=2023-04-22T04%3A40%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=WHHcXtZRwXqg8flZvonroYMIszu%2F7F%2FUgpIOm%2Fl7UBo%3D" alt="image-alt-text">
 
 **HINT:** Ensure to use the IP address of the second Compute instance in the SSH command.
 
@@ -314,7 +322,7 @@ In this section we will create a new security list. This security list will be u
 - Compartment: Make sure the correct Compartment is selected
 - Target Internet Gateway: Select the Internet Gateway for your VCN. 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG?st=2020-04-21T04%3A41%3A33Z&se=2023-04-22T04%3A41%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=l2948EIu0GGNKY5E7mZX4Vzmopd2byaIuoFeEBuGcn0%3D" alt="image-alt-text">
 
 6. Click **Create Route Table**.
 
@@ -345,7 +353,7 @@ In this section we will create a new security list. This security list will be u
 
 11. Leave all other options as default, Click **Create Subnet**.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG?st=2020-04-21T04%3A42%3A11Z&se=2023-04-22T04%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=VQx%2FfSa8zmRVK%2FnOmny0SVQmskRObSC%2BJbyxJmd4XbE%3D" alt="image-alt-text">
 
 
 ## Create Load Balancer and update Security List
@@ -369,7 +377,7 @@ In this section we will create a new security list. This security list will be u
 - **VIRTUAL CLOUD NETWORK**: Choose your Virtual Cloud Network
 - **SUBNET**: Choose the Regional Subnet we created (10.0.4.0 in this lab) 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_006.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Fundamentals_Lab/img/OCI_Fundamentals_006.PNG?st=2020-04-21T04%3A42%3A40Z&se=2023-04-22T04%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=ww8O9CGcUuhEEEusZcajUZXC0Ba4HmYu%2FR6dD2%2Bjwxo%3D" alt="image-alt-text">
 
 **Under Choose Backends:**
 
@@ -377,7 +385,7 @@ In this section we will create a new security list. This security list will be u
 - **SPECIFY A LOAD BALANCING POLICY**: Weighted Round Robin
 - Click **Add Backend** and choose the two backend compute instance created earlier
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_007.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Fundamentals_Lab/img/OCI_Fundamentals_007.PNG?st=2020-04-21T04%3A43%3A04Z&se=2023-04-22T04%3A43%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=pnrCLhon6XTnAhLfA6HmgDo5NO4TI0rmxwvA%2B%2FQEkPY%3D" alt="image-alt-text">
 
 ***Under SPECIFY HEALTH CHECK POLICY***
 
@@ -399,7 +407,7 @@ In this section we will create a new security list. This security list will be u
 
 3. Click **Create Load Balancer** 
 
-4. Wait for the load balancer to become active and then note down it’s Public IP address.
+4. Wait for the load balancer to become active and then note down itâ€™s Public IP address.
 
 **We now have a load balancer that will manage the subnet we created earlier.**
 
@@ -462,7 +470,7 @@ We will now test the Load Balancer functionality (load balance using round robin
 
 ## Verify High Availability of HTTP Servers
 
-In this section we will access the two Web servers configured earlier using Load Balancer’s Public IP address and demonstrate Load Balancer’s ability to route traffic on round robin basis(Per the Policy Configured). In case one of the web server becomes un-available the web content will be available via the second server (High Availability)
+In this section we will access the two Web servers configured earlier using Load Balancerâ€™s Public IP address and demonstrate Load Balancerâ€™s ability to route traffic on round robin basis(Per the Policy Configured). In case one of the web server becomes un-available the web content will be available via the second server (High Availability)
 
 1. Open a web browser and enter load balancer's public IP address. 
 
@@ -470,9 +478,9 @@ In this section we will access the two Web servers configured earlier using Load
 
 3. Refresh the browser multiple times and Observer Load Balancer Balancing traffic between the 2 web servers.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_009.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Fundamentals_Lab/img/OCI_Fundamentals_009.PNG?st=2020-04-21T04%3A43%3A38Z&se=2023-04-22T04%3A43%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=hbcSQNWqAC9G8TiL%2Fr9aP3hRdwMQThaK4lPDhRePi2U%3D" alt="image-alt-text">
              
-**NOTE:** In case one of the server goes down the Application will be accessible via Load Balancer’s Public IP address.
+**NOTE:** In case one of the server goes down the Application will be accessible via Load Balancerâ€™s Public IP address.
 
 **This Lab is not intended to test Failover and Recovery of Backend Servers. User can test that functionality at their own discretion. Any trouble shooting in case any issue is encountered is out of scope of this lab**
 
@@ -484,21 +492,21 @@ Delete Load Balancer and associated components:
 
 2. Click **Delete**.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_010.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Fundamentals_Lab/img/OCI_Fundamentals_010.PNG?st=2020-04-21T04%3A44%3A05Z&se=2023-04-22T04%3A44%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=pIOu%2Fgd97L6SoJoba1Rn8VLk0BQMEMfaMK8b4xzvhSY%3D" alt="image-alt-text">
 
 3. Step 3. Click **OK** in the Confirm Window. Wait for Load Balancer to fully delete.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_011.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Fundamentals_Lab/img/OCI_Fundamentals_011.PNG?st=2020-04-21T04%3A44%3A29Z&se=2023-04-22T04%3A44%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=xqHTc8eckqfp50Qp5WfotSllLFnQt%2B8miPqFFGPiYGU%3D" alt="image-alt-text">
 
 4. From OCI services menu Click **Instances** under Compute
 
 5. Locate first compute instance, Click Action icon and then **Terminate** 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG?st=2020-04-21T05%3A16%3A29Z&se=2023-04-22T05%3A16%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=19yHCI9NTI6zmTa7Lye4qyco5D5COsmOjTFQTak6tfY%3D" alt="image-alt-text">
 
 6. Make sure **Permanently delete the attached Boot Volume** is checked, Click **Terminate Instance**. Wait for instance to fully Terminate
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG?st=2020-04-21T04%3A45%3A40Z&se=2023-04-22T04%3A45%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=%2Fjav3GsFUv2UnhvmNLvTUUFKHhCV%2Fpu2H9IxwJjWZnA%3D" alt="image-alt-text">
 
 7. Repeat the step to delete the second compute intance.
 
@@ -507,8 +515,6 @@ appear.
 
 9. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/Oracle%20Cloud%20Infrastructure%20Operations%20Associate/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG?st=2020-04-21T05%3A16%3A55Z&se=2023-04-22T05%3A16%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=BMYYa3B0V9FoUHrIYDZvkeZEK2EBgOykH43s%2BIdyjf4%3D" alt="image-alt-text">
 
-
-***Congratulations! You have successfully completed the lab. ***
-
+***Congratulations! You have successfully completed the lab.***
