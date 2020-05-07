@@ -20,8 +20,6 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 
 **We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
 
-
-
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
 - Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
@@ -53,9 +51,7 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 
 6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
-
 ## Sign in to OCI Console and create VCN Auth token and Docker Registry
-
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -64,56 +60,67 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/1.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Networking QuickStart**
+2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Start VCN Wizard**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/2.png?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v6.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v1.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-3. Click **VCN with Internet Connectivity** and click **Start Workflow**
+3. Click **VCN with Internet Connectivity** and click **Start VCN Wizard**.
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v2.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
 4. Fill out the dialog box:
-
 
 - **VCN NAME**: Provide a name
 - **COMPARTMENT**: Ensure your compartment is selected
 - **VCN CIDR BLOCK**: Provide a CIDR block (10.0.0.0/16)
 - **PUBLIC SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
 - **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.2.0/24)
-- Click **Next**
+- Click **Next**.
 
-5. Verify all the information and  Click **Create**
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v3.PNG?st=2020-05-07T10%3A57%3A26Z&se=2023-05-08T10%3A57%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=5U%2BaJudLgu7GpmhEd6%2B6BabwjiZO84yNYbZ1%2Fn6JywY%3D" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v7.PNG?st=2020-05-07T10%3A58%3A17Z&se=2023-05-08T10%3A58%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=Tih%2FQGvqpJPJ7XIbuXlxch9YZh4qvHyzveAZkcvK9%2FU%3D" alt="image-alt-text">
+
+5. Verify all the information and  Click **Create**.
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v4.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
 6. This will create a VCN with followig components.
 
 **VCN**, **Public subnet**, **Private subnet**, **Internet gateway (IG)**, **NAT gateway (NAT)**, **Service gateway (SG)**
 
 7. Click **View Virtual Cloud Network** to display your VCN details.
-             
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v5.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
 ***We will now create an Auth Token. This token will be used to login to connect to OCI Docker registry from the Docker computeinstance that will be created later one***
 
 8. In OCI console Click the user icon (top right)  then **User settings**. Under Resrouces Click **Auth Token**, then **Generate Token**. In pop up window provide a description then Click **Generate Token**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_005.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/3.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_006.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/4.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 9.  Click **Copy** and save the token in Notepad.**Do not close the window without saving the token as it can not be retrieved later**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_007.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/5.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 10. From OCI Services menu, Click **Registry(OCIR)** under **Developer Services**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0033.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/6.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
  
 11. Click **Create Repository**. Provide Repository name (all Lowercase), Check **Public** for **Acess**, Click **Submit**
 
 12.  Once created, verify there are no existing images in the repository (as shown in OCI console)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0034.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/7.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 ***We now have a Docker registry and Auth token (to validate login to the registry). Next we will create a Public/Private key pair and then compute instance to test pushing and pulling images from the registry.***
 
@@ -121,7 +128,7 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/8.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 2. Enter command 
 ```
@@ -130,11 +137,11 @@ ssh-keygen
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/9.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 3. Press Enter When asked for 'Enter File in which to save the key', 'Created Directory, 'Enter passphrase', and 'Enter Passphrase again.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/10.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 4. You should now have the Public and Private keys:
 
@@ -161,11 +168,11 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
  , highlight the key and copy 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/11.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/12.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
 
@@ -178,6 +185,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Instance Shape**: Select VM shape 
 
 **Under Configure Networking**
+
 - **Virtual cloud network compartment**: Select your compartment
 - **Virtual cloud network**: Choose the VCN 
 - **Subnet Compartment:** Choose your compartment. 
@@ -185,7 +193,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Use network security groups to control traffic** : Leave un-checked
 - **Assign a public IP address**: Check this option
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/13.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 - **Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
@@ -195,7 +203,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 **NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1  OR choose a different AD
 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/14.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 10. Wait for Instance to be in **Running** state. In git-bash Enter Command:
 ```
@@ -213,7 +221,7 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 
 13. Enter 'Yes' when prompted for security message
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/15.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt. Nex install Dcoker, Enter command:
 
@@ -221,7 +229,7 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0035.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/16.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 15. Enter command:
 ```
@@ -256,7 +264,7 @@ exit
 
 to logout of ssh session on compute instance and then ssh back in to the compute instance. Enter command **Docker images** and ensure no error is displayed
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0036.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/17.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 21. We will now pull a example image from Docker registry  to the compute instance. Enter Command:
 
@@ -269,7 +277,7 @@ docker images
 ``` 
 and verify alpine is present
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0037.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/18.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 22. Now we will push this image to Docker registry created in OCI. First login to Registry in OCI. Enter command:
 
@@ -287,7 +295,7 @@ docker login <Region_Name_Code>.ocir.io
 - Username:  Enter it in format Tenancy Name/User name (for example: TS-SPL-55/john_doe)
 - Password: Paste the Auth key saved earlier (Characters wont be visible)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0038.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/19.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 24. Verify Login Succeeded message is displayed.
 
@@ -318,7 +326,7 @@ and verify version<x.y>.test is present.
 - <docker_registry_name> is **docker-test-image**
 - <image_name> is **version4.0.test**  
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0039.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/20.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 27. We will now push the image to docker registry in OCI. Enter command: 
 
@@ -333,7 +341,7 @@ docker push <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<im
 - <docker_registry_name> is **docker-test-image**
 - <image_name> is **version4.0.test**  
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0040.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/21.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 28. Switch to OCI window and navigate to your registry. Newly pushed image should be visible.
 
@@ -345,7 +353,7 @@ docker pull <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<im
 ```
 30. Verify the pull command was successful
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0041.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/22.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 **HINT:** We are pulling the same image that we just pushed.
 
@@ -359,11 +367,11 @@ docker pull <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<im
 
 3. Locate first compute instance, Click Action icon and then **Terminat** 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/23.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/24.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 
 5. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
@@ -371,10 +379,10 @@ appear.
 
 6. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/25.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 7. Navigate to your registry(**Registry(OCIR)** under **Developer Services**), Click Registry Name, Under **Actions** Click **Delete Repository**  ,Click **Delete** in confirmation window
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0042.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Container_Registry/img/26.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text">
 
 ***Congratulations! You have successfully completed the lab.***
