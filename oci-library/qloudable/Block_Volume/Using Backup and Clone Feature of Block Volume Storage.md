@@ -347,3 +347,5 @@ appear.
 10. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Block_Volume/img/20.png?st=2020-04-20T07%3A01%3A40Z&se=2023-04-21T07%3A01%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=tmAPoG5ccThPNKRmiH4ozdMZ7mGJ6VqvyaC%2F4OE1K28%3D" alt="image-alt-text" >
+
+***Congratulations! You have successfully completed the lab.***
