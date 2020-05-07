@@ -63,6 +63,11 @@ In this lab we will use Custom image feature of OCI. Using this feature an exist
 
 <img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/2.png?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v1.png?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v2.png?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
 3. Click **VCN with Internet Connectivity** and click **Start VCN Wizard**
@@ -82,7 +87,14 @@ In this lab we will use Custom image feature of OCI. Using this feature an exist
 
 **VCN**, **Public subnet**, **Private subnet**, **Internet gateway (IG)**, **NAT gateway (NAT)**, **Service gateway (SG)**
 
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v3.png?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v4.png?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+
 7. Click **View Virtual Cloud Network** to display your VCN details.
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v5.png?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
 ## Create ssh keys and compute instance
 
@@ -109,8 +121,7 @@ git-bash sessions and any other application (Notepad, etc.) by Clicking the Swit
 
 /C/Users/PhotonUser/.ssh/id_rsa.pub (Public Key)
 
-**NOTE:** id_rsa.pub will be used to create 
-Compute instance and id_rsa to connect via SSH into compute instance.
+**NOTE:** id_rsa.pub will be used to create Compute instance and id_rsa to connect via SSH into compute instance.
 
 **HINT:** Enter command
 
@@ -134,7 +145,7 @@ highlight the key and copy
 
 <img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/7.png?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
-7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
+7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute**.
 
 8. Click **Create Instance**. Fill out the dialog box:
 
@@ -170,7 +181,7 @@ highlight the key and copy
 
 11. Enter **ls** and verify id_rsa file exists
 
-12. Enter command 
+12. Enter command
 
 `ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>`
 
