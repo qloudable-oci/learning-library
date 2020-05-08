@@ -1,4 +1,5 @@
-# Configuring and using Functions in OCI
+# Configuring Functions
+
 ## Table of Contents
 
 [Overview](#overview)
@@ -20,7 +21,6 @@ Oracle Functions is a fully managed, highly scalable, on-demand, Functions-as-a-
 **Some Key points;**
 
 **We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
-
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -58,56 +58,67 @@ Oracle Functions is a fully managed, highly scalable, on-demand, Functions-as-a-
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
 
-
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/1.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Networking QuickStart**
+2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Start VCN Wizard**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/2.png?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v6.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v1.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-3. Click **VCN with Internet Connectivity** and click **Start Workflow**
+3. Click **VCN with Internet Connectivity** and click **Start VCN Wizard**.
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v2.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
 4. Fill out the dialog box:
-
 
 - **VCN NAME**: Provide a name
 - **COMPARTMENT**: Ensure your compartment is selected
 - **VCN CIDR BLOCK**: Provide a CIDR block (10.0.0.0/16)
 - **PUBLIC SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
 - **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.2.0/24)
-- Click **Next**
+- Click **Next**.
 
-5. Verify all the information and  Click **Create**
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v3.PNG?st=2020-05-07T10%3A57%3A26Z&se=2023-05-08T10%3A57%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=5U%2BaJudLgu7GpmhEd6%2B6BabwjiZO84yNYbZ1%2Fn6JywY%3D" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v7.PNG?st=2020-05-07T10%3A58%3A17Z&se=2023-05-08T10%3A58%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=Tih%2FQGvqpJPJ7XIbuXlxch9YZh4qvHyzveAZkcvK9%2FU%3D" alt="image-alt-text">
+
+5. Verify all the information and  Click **Create**.
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v4.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
 6. This will create a VCN with followig components.
 
 **VCN**, **Public subnet**, **Private subnet**, **Internet gateway (IG)**, **NAT gateway (NAT)**, **Service gateway (SG)**
 
 7. Click **View Virtual Cloud Network** to display your VCN details.
-              
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v5.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
 ## Create ssh keys and compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/3.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
-2. Enter command 
+2. Enter command
+
 ```
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/4.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 3. Press Enter When asked for 'Enter File in which to save the key', 'Created Directory, 'Enter passphrase', and 'Enter Passphrase again.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/5.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 4. You should now have the Public and Private keys:
 
@@ -118,104 +129,107 @@ git-bash sessions and any other application (Notepad, etc.) by Clicking the Swit
 **NOTE:** id_rsa.pub will be used to create 
 Compute instance and id_rsa to connect via SSH into compute instance.
 
-**HINT:** Enter command 
-```
-cd /C/Users/PhotonUser/.ssh (No Spaces) 
-```
+**HINT:** Enter command
 
+```
+cd /C/Users/PhotonUser/.ssh (No Spaces)
+```
 and then 
 
 ```
 ls 
 ```
-to verify the two files exist. 
+to verify the two files exist.
 
-5. In git-bash Enter command  
+5. In git-bash Enter command
 ```
 cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
 
-, highlight the key and copy 
+, highlight the key and copy
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/6.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/7.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
 7. Click **Create Instance**. Fill out the dialog box:
 
-- **Name your instance**: Enter a name 
+- **Name your instance**: Enter a name
 - **Choose an operating system or image source**: Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and Click **Select Image**
 - **Availability Domain**: Select availability domain
-- **Instance Type**: Select Virtual Machine 
-- **Instance Shape**: Select VM shape 
+- **Instance Type**: Select Virtual Machine
+- **Instance Shape**: Select VM shape
 
 **Under Configure Networking**
+
 - **Virtual cloud network compartment**: Select your compartment
-- **Virtual cloud network**: Choose the VCN 
-- **Subnet Compartment:** Choose your compartment. 
-- **Subnet:** Choose the Public Subnet under **Public Subnets** 
+- **Virtual cloud network**: Choose the VCN
+- **Subnet Compartment:** Choose your compartment.
+- **Subnet:** Choose the Public Subnet under **Public Subnets**
 - **Use network security groups to control traffic** : Leave un-checked
 - **Assign a public IP address**: Check this option
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/8.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 - **Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 
 8. Click **Create**
 
-
 **NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1  OR choose a different AD
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/9.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 9. Wait for Instance to be in **Running** state. In git-bash Enter Command:
+
 ```
  cd /C/Users/PhotonUser/.ssh
 ```
 10. Enter **ls** and verify id_rsa file exists
 
-11. Enter command 
+11. Enter command
+
 ```bash
 ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 ```
-
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command
 
 12. Enter 'Yes' when prompted for security message
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text">
- 
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/10.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
+
 13. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
 ## Configure and invoke Function
 
 1. Check oci CLI installed version, Enter command:
+
 ```
 oci -v
 ```
 **NOTE:** Version should be minimum 2.5.X (3/23/2019)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_001.png" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/11.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 2. Next we will configure OCI CLI. Enter command:
+
 ```
 oci setup config
 ```
 
 3. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page Click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/12.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 4. Repeat the step to find tenancy OCID (Human icon followed by Clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followed by providing your region name (us-ashburn-1, us-phoneix-1 etc)
 
 5. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_005.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/13.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 6. **oci setup config** also generated an API key. We will need to upload this API key into our OCI account for authentication of API calls. Switch to ssh session to compute instance, to display the conent of API key Enter command :
 
@@ -225,17 +239,17 @@ cat ~/.oci/oci_api_key_public.pem
 
 7. Hightligh and copy the content from ssh session. Switch to OCI Console, Click Human icon followed by your user name. In user details page Click **Add Public Key**. In the dialg box paste the public key content and Click **Add**.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/14.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/15.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 **This will generate a finger print**
 
 8. Next we need to generate an Auth token its an Oracle-generated token that you can use to authenticate with third-party APIs and Autonomous Database instance. 
 In OCI console Click the user icon (top right)  then **User settings**. Under Resrouces Click **Auth Token**, then **Generate Token**. In pop up window provide a description then Click **Generate Token**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_005.PNG" alt="image-alt-text">
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_006.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/16.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/17.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 9.  Click **Copy** and save the token in Notepad.
 
@@ -248,7 +262,7 @@ In OCI console Click the user icon (top right)  then **User settings**. Under Re
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0035.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/18.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 11. Enter command:
 
@@ -287,7 +301,7 @@ docker images
 ```
 and ensure no error is displayed
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0036.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/19.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 ```
 docker version
@@ -330,18 +344,15 @@ fn use context <CONTEXT NAME>
 ```bash
 fn update context oracle.compartment-id <compartment-ocid>
 ```
-
-
 23. Configure the new context with the api-url endpoint to use when calling the OCI API. Enter command;
 
 ```
 fn update context api-url https://functions.us-<REGION NAME>.oraclecloud.com
 ```
-
 **For example: fn update context api-url https://functions.us-ashburn-1.oraclecloud.com**
 
-
 24. Configure the new context with the address of the Docker registry and repository that you want to use with Oracle Functions, Enter command;
+
 ```bash
 fn update context registry <region-code>.ocir.io/<tenancy-namespace>/<repo-name>
 ```
@@ -363,6 +374,7 @@ fn update context oracle.profile DEFAULT
 ```
 
 26. Next we will login to OCI Registry and ensure we have access. Enter command;
+
 ```bash
 docker login <region-code>.ocir.io
 ```
@@ -377,7 +389,7 @@ docker login <region-code>.ocir.io
  
 28. When prompted for a password, enter the auth token generated ealier.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Fn/img/Fn_001.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/20.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 29. Next we will create our fist applicaiton. Login to OCI console. Under OCI serverices menu, click  **Solutions and Platform**, click **Developer Services** and then **Functions**
 
@@ -404,20 +416,21 @@ a /src directory containing source files and directories for the <FUNCTION_NAME>
 a Maven configuration file called pom.xml that specifies the dependencies required to compile the function
 
 32. Next we will deploy the function. Change directory to the <FUNCTION_NAME> directory created in the previous step
+
 ```bash
 cd <FUNCTION_NAME>
 ```
-
 33. Enter the following single Fn Project command to build the function and its dependencies as a Docker image called <FUNCTION_NAME>, push the image to the specified Docker registry, and deploy the function to Oracle Functions in the <NAME> used when **Create Application** was used. Enter command;
+
 ```bash
 fn deploy --app <NAME>
 ```
-
 **NOTE: <FUNCTION_NAME> is what was used in the compute instance and <NAME> is what was used in OCI Console**
 
 34. You can also Confirm that the <FUNCTION_NAME> image has been pushed to Oracle Cloud Infrastructure Registry by logging in to the Console. Under **Solutions and Platform**, go to **Developer Services** and click **Registry**. 
 
 35.  Now lets Invoke your first function. In the ssh session to compute instance, Enter command;
+
 ```bash
 fn invoke <NAME> <FUNCTION_NAME>-func
 ```
@@ -435,11 +448,11 @@ Congratulations! You've just created, deployed, and invoked your first function 
 
 3. Locate first compute instance, Click Action icon and then **Terminat** 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/21.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/22.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 5. Repeat the step to delete second compute instance
 
@@ -448,10 +461,10 @@ appear.
 
 7. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/23.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 8. Navigate to **Functions** under **Developer Servies**. Click the action icon and Click **Delete**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Fn/img/Fn_002.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Configuring_Fn/img/23.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
-**Congratulations! You have successfully completed the lab**
+***Congratulations! You have successfully completed the lab***
