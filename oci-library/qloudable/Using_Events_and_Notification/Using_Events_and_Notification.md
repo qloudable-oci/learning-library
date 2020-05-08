@@ -1,4 +1,5 @@
 # Using Events and Notification
+
 ## Table of Contents
 
 [Overview](#overview)
@@ -22,7 +23,6 @@ In this lab we will verify notifications when a compute instance is launched and
 **Some Key points;**
 
 **We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
-
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -60,10 +60,9 @@ In this lab we will verify notifications when a compute instance is launched and
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
 
-
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Events_and_Notification/img/1.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 2. First we will create a Notification topic and subscribe to this topic. From OCI Services menu,Click **Notifications** under **Application Integration**
 
@@ -74,7 +73,7 @@ In this lab we will verify notifications when a compute instance is launched and
 
 3. Click **Create**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Events_and_Notification/img/Events_001.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Events_and_Notification/img/2.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 4. Once the topic state changes to **Active**, Click the topic Name. Click **Create Subscription** and fill out the dialog box:
 
@@ -110,42 +109,50 @@ Under **Actions**
 
 11. Click **Create Rule**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Events_and_Notification/img/Events_002.PNG" alt="image-alt-text">
-
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Events_and_Notification/img/3.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 **We have now configured Notification service and tied events to it with a specific compartment. When a new compute instance is launched or terminated an email notification will be sent to the email address specified**
 
 ## Create VCN 
 
-1. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Networking QuickStart**
+1. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Start VCN Wizard**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Events_and_Notification/img/4.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v6.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v1.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
+3. Click **VCN with Internet Connectivity** and click **Start VCN Wizard**.
 
-2. Click **VCN with Internet Connectivity** and click **Start Workflow**
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v2.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
 
-3. Fill out the dialog box:
-
+4. Fill out the dialog box:
 
 - **VCN NAME**: Provide a name
 - **COMPARTMENT**: Ensure your compartment is selected
 - **VCN CIDR BLOCK**: Provide a CIDR block (10.0.0.0/16)
 - **PUBLIC SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
 - **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.2.0/24)
-- Click **Next**
+- Click **Next**.
 
-4. Verify all the information and  Click **Create**
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v3.PNG?st=2020-05-07T10%3A57%3A26Z&se=2023-05-08T10%3A57%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=5U%2BaJudLgu7GpmhEd6%2B6BabwjiZO84yNYbZ1%2Fn6JywY%3D" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v7.PNG?st=2020-05-07T10%3A58%3A17Z&se=2023-05-08T10%3A58%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=Tih%2FQGvqpJPJ7XIbuXlxch9YZh4qvHyzveAZkcvK9%2FU%3D" alt="image-alt-text">
 
-5. This will create a VCN with followig components.
+5. Verify all the information and  Click **Create**.
+
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v4.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
+6. This will create a VCN with followig components.
 
 **VCN**, **Public subnet**, **Private subnet**, **Internet gateway (IG)**, **NAT gateway (NAT)**, **Service gateway (SG)**
 
-6. Click **View Virtual Cloud Network** to display your VCN details.
+7. Click **View Virtual Cloud Network** to display your VCN details.
 
-              
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Custom_Image/img/v5.PNG?st=2020-04-17T13%3A29%3A35Z&se=2023-04-18T13%3A29%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=qiutPpXR23TPkCPGckbB84JaQFAwUef0NgOByiqtTXM%3D" alt="image-alt-text">
+
 ## Create compute instance and verify notification
 
 1. From OCI services menu, Click **Instances** under **Compute** 
@@ -159,6 +166,7 @@ Under **Actions**
 - **Instance Shape**: Select VM shape 
 
 **Under Configure Networking**
+
 - **Virtual cloud network compartment**: Select your compartment
 - **Virtual cloud network**: Choose the VCN 
 - **Subnet Compartment:** Choose your compartment. 
@@ -166,7 +174,7 @@ Under **Actions**
 - **Use network security groups to control traffic** : Leave un-checked
 - **Assign a public IP address**: Check this option
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Events_and_Notification/img/5.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 - **Boot Volume:** Leave the default
 - **Add SSH Keys:** Leave empty
@@ -175,14 +183,13 @@ Under **Actions**
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1  OR choose a different AD
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Events_and_Notification/img/6.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 4. Switch to your email account and verify an event indicating compute instance launch was received
 
 5. Wait for Instance to be in **Running** state. 
 
 6. Switch to your email account and verify an event indicating compute instance create was received
-
 
 ## Delete the resources
 
@@ -192,11 +199,11 @@ Under **Actions**
 
 3. Locate first compute instance, Click Action icon and then **Terminat** 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Events_and_Notification/img/7.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Events_and_Notification/img/8.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 5. Switch to your email account and verify an event indicating compute instance terminate was received
 
@@ -207,11 +214,11 @@ appear.
 
 7. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Events_and_Notification/img/9.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 8. Navigate to **Functions** under **Developer Servies**. Click the action icon and Click **Delete**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Fn/img/Fn_002.PNG" alt="image-alt-text">
+<img src="https://qloudableassets.blob.core.windows.net/oci-learninglibrary/qloudable/Using_Events_and_Notification/img/10.png?st=2020-04-21T07%3A42%3A24Z&se=2023-04-22T07%3A42%3A00Z&sp=rl&sv=2018-03-28&sr=c&sig=odOiaDHfRVGu7lVnPrxtH5ZwsTH6su4eKpvpolyD7TE%3D" alt="image-alt-text">
 
 9. From OCI Services menu,Click **Notifications** under **Application Integration**. Click your Topic name
 
@@ -221,5 +228,4 @@ appear.
 
 12. Click your Rule name and Click **Delete**. In the dialog box type **DELETE** and click **Delete**
  
-
-**Congratulations! You have successfully completed the lab**
+***Congratulations! You have successfully completed the lab***
